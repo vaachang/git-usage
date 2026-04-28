@@ -23,8 +23,30 @@ git push -u origin main
 ```
 
 ## 克隆仓库
+```
+git clone git@github.com:userxxx/git-usage.git
+
+git config user.name userxxx
+git config user.email abc@example.com
+
+git config user.signingkey <GPG KEY ID>
+git config commit.gpgsign true
+
+
+git remote add origin git@github.com:userxxx/git-usage.git
+git remote set-url --add --push origin git@github.com:userxxx/git-usage.git
+git remote set-url --add --push origin ssh://git@codeberg.org/userxxx/git-usage.git
+
+```
 
 ## 后续操作
+
+```
+git add .
+git commit -m "Update README"
+git pull
+git push
+```
 
 # git用法
 
