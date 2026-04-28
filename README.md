@@ -1,3 +1,31 @@
+# 快捷用法
+## 新建仓库
+
+```
+echo "# start" >> README.md
+git init
+
+git config user.name userxxx
+git config user.email abc@example.com
+
+git config user.signingkey <GPG KEY ID>
+git config commit.gpgsign true
+
+git add README.md
+git commit -m "first commit"
+git branch -M main
+
+git remote add origin git@github.com:userxxx/git-usage.git
+git remote set-url --add --push origin git@github.com:userxxx/git-usage.git
+git remote set-url --add --push origin ssh://git@codeberg.org/userxxx/git-usage.git
+
+git push -u origin main
+```
+
+## 克隆仓库
+
+## 后续操作
+
 # git用法
 
 列出所有全局配置
@@ -47,6 +75,11 @@ git remote set-url --add --push origin ssh://git@codeberg.org/userxxx/git-usage.
 ```
 git pull origin main
 git push origin main
+```
+
+git删除远程仓库
+```
+git remote rm <仓库别名>
 ```
 
 git切换分支
@@ -176,9 +209,9 @@ gpg --import my_private_key.asc
 
 # codeberg
 
-ssh://git@codeberg.org/userxxx/git-usage.git
+SSH  ssh://git@codeberg.org/userxxx/git-usage.git
 
-https://codeberg.org/userxxx/git-usage.git
+HTTPS  https://codeberg.org/userxxx/git-usage.git
 
 ## 从命令行创建一个新的仓库
 
@@ -201,9 +234,9 @@ git push -u origin main
 
 # github
 
-git@github.com:userxxx/git-usage.git
+SSH  git@github.com:userxxx/git-usage.git
 
-https://github.com/userxxx/git-usage.git
+HTTPS  https://github.com/userxxx/git-usage.git
 
 ## create a new repository on the command line
 
