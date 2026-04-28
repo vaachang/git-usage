@@ -71,9 +71,9 @@ git config user.email abc@example.com
 git config user.signingkey <GPG KEY ID>
 git config commit.gpgsign true
 ```
-windows踩坑经验，需要配置GPG路径
+windows踩坑经验，需要配置GPG路径，按需修改。
 ```
-git config
+git config --global gpg.program "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
 ```
 
 克隆仓库
